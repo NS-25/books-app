@@ -6,13 +6,12 @@ import BookList from "./components/BookList";
 function App() {
   let [books, setBooks] = useState([]);
 
-
-
   // delete function for the book card..
   const deleteBookById = (id) => {
     const updatedBooks = books.filter((book) => {
-    return false;
+      return book.id !== id;
     });
+    setBooks(updatedBooks);
   };
 
   const createBook = (title) => {
@@ -25,7 +24,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <BookList books={books} />
+        <BookList books={books} onDelete={deleteBookById} />
         <BookCreate onCreate={createBook} />
       </div>
     </>
