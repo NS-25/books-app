@@ -1,8 +1,8 @@
 import { useState } from "react";
 import React from "react";
 
-const BookEdit = () => {
-  const [title, setTitle] = useState("");
+const BookEdit = ({ book }) => {
+  const [title, setTitle] = useState(book.title);
 
   // handle click for edit button...
   const handleChange = (event) => {
@@ -17,7 +17,7 @@ const BookEdit = () => {
 
   return (
     <form onSubmit={handleSubmit} className="book-edit">
-      <label>title</label>
+      <label>Title</label>
       <input className="input" value={title} onChange={handleChange} />
       <button className="button is-primary">Save</button>
     </form>
