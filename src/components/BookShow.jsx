@@ -14,10 +14,15 @@ const BookShow = ({ book, onDelete, onEdit }) => {
     setShowEdit(!showEdit);
   };
 
+  //handle submit for edit form close..
+  const handleSubmit = () => {
+    setShowEdit(false);
+  };
+
   // Question part!
   let content = <h3>{book.title}</h3>;
   if (showEdit) {
-    content = <BookEdit onEdit={onEdit} book={book} />;
+    content = <BookEdit onSubmit={handleSubmit} onEdit={onEdit} book={book} />;
   }
 
   return (
