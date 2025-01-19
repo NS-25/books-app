@@ -1,11 +1,9 @@
 import React from "react";
 
 const BookEdit = () => {
-  return (
-    <div>
-      <p>Book edit</p>
-    </div>
-  );
+  return <form className="book-edit">
+    <label>title</label>
+  </form>;
 };
 
 export default BookEdit;

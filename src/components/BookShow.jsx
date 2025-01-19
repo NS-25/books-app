@@ -11,12 +11,17 @@ const BookShow = ({ book, onDelete }) => {
   };
   // handle edit click
   const handleEditClick = () => {
-
+    setShowEdit(!showEdit);
   };
+
+  let content = <h3>{book.title}</h3>;
+  if (showEdit) {
+    content = <BookEdit />;
+  }
 
   return (
     <div className="book-show">
-      {book.title}
+      <div>{content}</div>
       <div className="actions">
         <div className="action">
           <button>Edit</button>
