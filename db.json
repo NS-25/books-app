@@ -1,3 +1,8 @@
 {
-  "books": []
+  "books": [
+    {
+      "id": "8ba6",
+      "title": "Harry Potter"
+    }
+  ]
 }
