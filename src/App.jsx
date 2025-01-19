@@ -14,6 +14,7 @@ function App() {
       }
       return book;
     });
+    setBooks(updatedBooks);
   };
 
   // delete function for the book card..
