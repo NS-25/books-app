@@ -22,10 +22,11 @@ const BookShow = ({ book, onDelete }) => {
   return (
     <div className="book-show">
       <div>{content}</div>
+
       <div className="actions">
-        <div className="action">
-          <button>Edit</button>
-        </div>
+        <button className="edit" onClick={handleEditClick}>
+          Edit
+        </button>
         <button className="delete" onClick={handleDeleteClick}>
           Delete
         </button>
