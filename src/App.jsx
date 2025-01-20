@@ -22,7 +22,12 @@ function App() {
   // fetchBooks();
 
   // Edit function for the book card
-  const editBookById = (id, newTitle) => {
+  const editBookById = async (id, newTitle) => {
+    const response = await axios.put(`http://localhost:3001/books/${id}`, {
+      title: newTitle,
+    });
+
+    console.log(response);
     const updatedBooks = books.map((book) => {
       if (book.id === id) {
         return { ...book, title: newTitle };
