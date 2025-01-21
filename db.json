@@ -1,16 +1,8 @@
 {
   "books": [
     {
-      "id": "8ba6",
+      "id": "f599",
       "title": "Harry Potter"
-    },
-    {
-      "title": "Super Man",
-      "id": "19cb"
-    },
-    {
-      "title": "Spider Man 2",
-      "id": "dc8d"
     }
   ]
 }

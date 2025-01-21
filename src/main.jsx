@@ -6,7 +6,7 @@ import BooksContext from "./context/books.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BooksContext.Provider value={5}>
+    <BooksContext.Provider value={10}>
       <App />
     </BooksContext.Provider>
   </StrictMode>
