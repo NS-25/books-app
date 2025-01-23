@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
 import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
-import axios from "axios";
+import BooksContext from "./context/books";
 // import "./App.css";
 
 function App() {
-  
+  const { fetchBooks } = useContext(BooksContext);
   // useEffect for fetch data from server..
   useEffect(() => {
     fetchBooks();
@@ -14,17 +14,12 @@ function App() {
   // Do not call fetch request directly..
   // fetchBooks();
 
- 
   return (
     <>
       <div className="app">
         <h1>Reading List</h1>
-        <BookList
-          onEdit={editBookById}
-          books={books}
-          onDelete={deleteBookById}
-        />
-        <BookCreate onCreate={createBook} />
+        <BookList />
+        <BookCreate />
       </div>
     </>
   );
