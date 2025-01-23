@@ -5,14 +5,7 @@ import axios from "axios";
 // import "./App.css";
 
 function App() {
-  let [books, setBooks] = useState([]);
-
-  // get request api call
-  const fetchBooks = async () => {
-    const response = await axios.get("http://localhost:3001/books");
-    setBooks(response.data);
-  };
-
+  
   // useEffect for fetch data from server..
   useEffect(() => {
     fetchBooks();
