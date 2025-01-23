@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import axios from "axios";
 
 const BooksContext = createContext();
 
@@ -44,13 +45,12 @@ function Provider({ children }) {
     setBooks(updatedBooks);
   };
 
-  const [count, setCount] = useState(5);
-
   const valueToShare = {
-    count,
-    incrementCount: () => {
-      setCount(count + 1);
-    },
+    books,
+    deleteBookById: deleteBookById,
+    editBookById: editBookById,
+    createBook,
+    fetchBooks,
   };
 
   return (
