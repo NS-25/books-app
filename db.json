@@ -1,10 +1,6 @@
 {
   "books": [
     {
-      "id": "f599",
-      "title": "Harry Potter"
-    },
-    {
       "title": "Spider Man 2",
       "id": "a490"
     }
