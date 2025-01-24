@@ -3,7 +3,12 @@ import { useContext } from "react";
 import BooksContext from "../context/books";
 import BookShow from "./BookShow";
 
+function useBooksContext () {
+  return useBooksContext(BooksContext);
+}
+
 const BookList = () => {
+
   // context value use here...
   const { books } = useContext(BooksContext);
 
