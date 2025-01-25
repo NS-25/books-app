@@ -9,7 +9,7 @@ function App() {
   // useEffect for fetch data from server..
   useEffect(() => {
     fetchBooks();
-  }, []);
+  }, [fetchBooks]);
 
   // Do not call fetch request directly..
   // fetchBooks();
