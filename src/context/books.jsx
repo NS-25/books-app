@@ -8,13 +8,13 @@ function Provider({ children }) {
   let [books, setBooks] = useState([]);
 
   // get request api call
-  const fetchBooks = async () => {
+  const fetchBooks = useCallback(async () => {
     const response = await axios.get("http://localhost:3001/books");
     setBooks(response.data);
-  };
+  }, []);
 
   // ESLint error fix wit useCallback for useEffect function..
-  const stableFetchBooks = useCallback(fetchBooks, []);
+  // const stableFetchBooks = useCallback(fetchBooks, []);
 
   // Edit function for the book card
   const editBookById = async (id, newTitle) => {
