@@ -1,5 +1,6 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useCallback, useEffect } from "react";
 import axios from "axios";
+import { ESLint } from "eslint";
 
 const BooksContext = createContext();
 
@@ -11,6 +12,10 @@ function Provider({ children }) {
     const response = await axios.get("http://localhost:3001/books");
     setBooks(response.data);
   };
+
+  // ESLint error fix wit useCallback for useEffect function..
+  const stableFetchBooks = useCallback(fetchBooks, []);
+
   // Edit function for the book card
   const editBookById = async (id, newTitle) => {
     const response = await axios.put(`http://localhost:3001/books/${id}`, {
